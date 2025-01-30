@@ -15,10 +15,9 @@ import os
 from dotenv import load_dotenv #for environment variables
 import re
 import streamlit as st
+import cohere
 
 
-
-# Initialize database and LLM
 load_dotenv()
 os.environ["COHERE_API_KEY"] = os.getenv("COHERE_API_KEY")
 db = SQLDatabase.from_uri("sqlite:///Chinook.db")
