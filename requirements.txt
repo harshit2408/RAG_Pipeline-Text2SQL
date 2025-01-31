@@ -1,23 +1,25 @@
 # Core dependencies
-python-dotenv
-streamlit
+python-dotenv>=1.0.0
+streamlit>=1.30.0
 
 # LangChain and related components
-langchain
-langchain-community
-langchain-core
-langchain-cohere
-langchain-text-splitters
-langchain-chroma
+langchain>=0.1.0
+langchain-community>=0.0.10
+langchain-core>=0.1.10
+langchain-cohere>=0.0.3
+langchain-text-splitters>=0.0.1
+langchain-chroma>=0.0.2
 
 # Vector store and embeddings
-chromadb
-cohere
+chromadb>=0.4.22
+cohere>=4.37
 
 # Database dependencies
-sqlalchemy
-aiosqlite
+sqlalchemy>=2.0.25
+aiosqlite>=0.19.0
 
 # Optional but recommended for better performance
-typing-extensions
-pydantic
+typing-extensions>=4.8.0
+pydantic>=2.5.0
+
+cohere

@@ -238,5 +238,11 @@ chain = create_semantic_sql_chain(llm, db, retriever)
 result = chain.invoke({"question": llm_query})
 
 if llm_query:
-    st.write(result)
-    st.write(db.run(result))
+    import re
+    # Clean the result using regex
+    cleaned_result = re.sub(r'^```sql\s*|\s*```$', '', result).strip()
+    
+    st.markdown("**Generated SQL Query:**")
+    st.code(cleaned_result, language='sql')
+    st.markdown("**Query Results:**")
+    st.write(db.run(cleaned_result))
