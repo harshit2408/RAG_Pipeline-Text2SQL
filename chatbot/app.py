@@ -164,7 +164,7 @@ class SchemaRetriever:
         
         return sorted_results
     
-loader = TextLoader("chinook.sql", encoding="utf-8")
+loader = TextLoader("Chinook.sql", encoding="utf-8")
 documents = loader.load()
 
 splitter = SQLTextSplitter()
